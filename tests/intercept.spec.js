@@ -21,7 +21,7 @@ test.only('check for order page is empty', async ({ page }) => {
 
     page.route("https://rahulshettyacademy.com/api/ecom/order/get-orders-for-customer/*",
         async route =>{
-        const responsev= page.request.fetch(route.request());
+        const response= page.request.fetch(route.request());
         let body= JSON.stringify(fakeResponse);
         route.fulfill({
             response,
